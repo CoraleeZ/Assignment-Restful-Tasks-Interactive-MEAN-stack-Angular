@@ -25,17 +25,9 @@
         <button id='btn' (click)="showsubcategory(outer._id)">show details</button>
     </div>
 </div>
-<div *ngIf='oneouter' class='subcate'>
-    <div *ngFor='let detail of oneouter'>
-        <p class="title">{{detail.title}}</p>
-        <button id='btn' (click)="showwise(detail._id)">show details</button>
-    </div>
-</div>
-<div *ngFor='let x of oneinner' class='wise'>
-    <p class="title">{{x.title}}:{{x.description}}</p>
-</div>
 
 
+<app-rootpart *ngIf='oneouter' [subcate]='oneouter'></app-rootpart>
 
 
 <router-outlet></router-outlet>

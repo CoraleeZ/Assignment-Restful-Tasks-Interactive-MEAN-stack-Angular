@@ -10,8 +10,6 @@ export class AppComponent implements OnInit {
   title = 'public';
   allouter:any=[];
   oneouter:any=[];
-  oneinner:any=[];
-  
 
   constructor(private _allHero: HttpService){};
 
@@ -35,11 +33,5 @@ export class AppComponent implements OnInit {
     });
   }
 
-  showwise(id:any){
-    let wise=this._allHero.getOneInner(id);
-    wise.subscribe(data=>{
-      console.log("one inner data:",data);
-      this.oneinner=data;
-    });
-  }
+  
 }
